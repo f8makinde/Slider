@@ -4,6 +4,7 @@ import fruits from "./data";
 const Slider = () => {
     const [index, setIndex] = useState(0)
     const {id, name, image, text} = fruits[index]
+
     const newNumbers = (number) => {
            if(number > fruits.length -1){
               return 0
@@ -35,7 +36,7 @@ const Slider = () => {
         <h2 className='text-2xl font-bold'>{name}</h2>
         <p>{text}</p>
         </div>
-        <div className="flex p-8 space-x-96 absolute top-72">
+        <div className="flex p-8 space-x-96 absolute top-64">
            <div className="bg-black text-white rounded-full p-2 ml-24">
               <FaChevronLeft className="text-4xl self-start" onClick={prevBtn}/>
            </div>
